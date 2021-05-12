@@ -26,7 +26,10 @@ Learning Management System
       - 총 일시정지 시간 -> 
       - 총 재생 시간 -> 총 학습 시간
       - 
-  ### 데이터 수집
+  ### 학습 분석 및 활용
+  #### 참고자료
+    - https://www.imskorea.or.kr/assets/slides/2_20150330_seminar.pdf
+    - http://www.learningsparklab.com/archives/54
   
   ### reference
     * 이정은, 김다솜, 조일현. (2020). 동영상 기반 학습 환경에서 머신러닝을 활용한 행동로그의 학업성취 예측 모형 탐색. 컴퓨터교육학회 논문지, 23(2), 53-64.
