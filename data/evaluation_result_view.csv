@@ -1,0 +1,6 @@
+no,evaluation_no,evaluation_result_no,user_no,question_no,total_score,accuracy_score,duration_time_score,duration_time,limit_time,submit_cnt,accuracy_grade,duration_time_grade,submit_cnt_grade,"created_at"
+1,39,1,83,1,70,40,100,0,40,1,40,10,3,"2021-05-26 11:04:54"
+2,48,2,83,1,100,100,100,69,40,1,100,10,3,"2021-05-27 05:18:36"
+3,2,4,83,1,70,40,100,10,40,2,40,10,3,"2021-05-27 16:16:30"
+4,2,5,83,1,70,40,100,10,40,3,40,10,3,"2021-05-27 16:16:34"
+5,49,6,83,1,70,40,100,95,40,0,40,90,3,"2021-05-27 08:26:31"
