@@ -1,0 +1,26 @@
+// Syntax가 없으면 자동으로 proto2로 인식됨. grpc에서는 최신버전인 proto3를 사
+syntax = "proto3";
+
+// package 선언을 통해 naming 충돌 예방
+// python에서는 directory 기반으로 동작하기 때문에 naming 충돌이 일어나지 않지만, 다른 언어에서는 다르기에 선언해주어야함
+package predict;
+
+// Service Definition for Predict Passrate, Time, Score
+service Predictor {
+  rpc GetPredict (Numbers) returns (Predictions) {}
+}
+
+// Message Definition for Recommend
+
+// user_number and question_number
+message Numbers {
+  int32 unum = 1;
+  int32 qnum = 2;
+}
+
+// TC통과율, 소요시간, 종합점수
+message Predictions {
+  float passrate = 1;
+  int time = 2;
+  float score = 3;
+}
