@@ -21,6 +21,8 @@ message Numbers {
 // TC통과율, 소요시간, 종합점수
 message Predictions {
   float passrate = 1;
-  int time = 2;
+  int32 time = 2;
   float score = 3;
 }
+
+//  python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./predict.proto
