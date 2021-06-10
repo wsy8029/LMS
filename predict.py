@@ -136,13 +136,19 @@ def load_eval_data():
 def find_user_score(uid):
     data_eval = load_eval_data()
     idxs = data_eval.index[data_eval['user_no'] == uid].tolist()
-    idx = idxs[0]
+    if len(idxs) == 0: # 푼 문제가 없을 경우, 문제 0에 대한 임의의 점수를 반환한다.
+        qid = 0
+        passrate = 70
+        time = 40
+        score = 80
+    else:
+        idx = idxs[0]
 
-    # 첫번째 인덱스의 문제번호, TC통과율, 소요시간, 종합점수 추출
-    qid = data_eval['question_no'][idx]
-    passrate = data_eval['accuracy_score'][idx]
-    time = data_eval['duration_time'][idx]
-    score = data_eval['total_score'][idx]
+        # 첫번째 인덱스의 문제번호, TC통과율, 소요시간, 종합점수 추출
+        qid = data_eval['question_no'][idx]
+        passrate = data_eval['accuracy_score'][idx]
+        time = data_eval['duration_time'][idx]
+        score = data_eval['total_score'][idx]
 
     return qid, passrate, time, score
 
@@ -159,7 +165,7 @@ def predicts(user_no, question_no):
     return p_passrate, p_time, round(p_score,1)
 
 
-# print(predicts(83, 1))
+print(predicts(84, 1))
 # print(predicts(83, 2))
 # print(predicts(83, 3))
 # print(predicts(83, 4))
